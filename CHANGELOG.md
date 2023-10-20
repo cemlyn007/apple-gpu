@@ -2,6 +2,17 @@
 
 
 
+## v0.2.0 (2023-10-20)
+
+### Ci
+
+* ci: update release workflow ([`975a90a`](https://github.com/cemlyn007/apple-gpu/commit/975a90af4f959ecc3f96f06a0f14bae88e32b7d5))
+
+### Feature
+
+* feat: add license ([`e072b2d`](https://github.com/cemlyn007/apple-gpu/commit/e072b2d2f481cd3182a387354a369ac27a3eb034))
+
+
 ## v0.1.0 (2023-10-20)
 
 ### Ci
