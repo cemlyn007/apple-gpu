@@ -23,6 +23,7 @@ branch = "main"
 version_toml = ["pyproject.toml:project.version"]
 
 [tool.setuptools]
+packages = ["apple_gpu"]
 platforms = [
     "macosx"
 ]
