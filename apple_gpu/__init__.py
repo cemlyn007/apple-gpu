@@ -1,0 +1,1 @@
+from apple_gpu._src import accelerator_performance_statistics
