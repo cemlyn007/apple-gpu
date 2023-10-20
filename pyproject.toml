@@ -18,6 +18,11 @@ classifiers = [
 ]
 dependencies = ["pyobjc"]
 
+[project.optional-dependencies]
+test = [
+    "pytest>=7.1.2",
+]
+
 [tool.semantic_release]
 branch = "main"
 version_toml = ["pyproject.toml:project.version"]
