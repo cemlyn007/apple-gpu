@@ -2,6 +2,17 @@
 
 
 
+## v0.3.0 (2023-10-20)
+
+### Ci
+
+* ci: publish to pypi ([`af0d0e6`](https://github.com/cemlyn007/apple-gpu/commit/af0d0e6ee7168dfa7625bcf4e26aea29442d0dd5))
+
+### Feature
+
+* feat: add urls ([`10595c7`](https://github.com/cemlyn007/apple-gpu/commit/10595c70006497822c67e82071c5b53012cb7d8f))
+
+
 ## v0.2.0 (2023-10-20)
 
 ### Ci
