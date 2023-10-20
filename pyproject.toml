@@ -23,6 +23,11 @@ test = [
     "pytest>=7.1.2",
 ]
 
+[project.urls]
+homepage = "https://github.com/cemlyn007/apple-gpu"
+repository = "https://github.com/cemlyn007/apple-gpu"
+changelog = "https://github.com/cemlyn007/apple-gpu/blob/main/CHANGELOG.md"
+
 [tool.semantic_release]
 branch = "main"
 version_toml = ["pyproject.toml:project.version"]
