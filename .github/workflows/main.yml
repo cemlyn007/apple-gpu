@@ -68,6 +68,7 @@ jobs:
           git config --global user.name "$GIT_COMMITTER_NAME"
           git config --global user.email "$GIT_COMMITTER_EMAIL"
           git config --system --add safe.directory "*"
-          python -m semantic_release -v publish
+          python -m semantic_release --verbose version
+          python -m semantic_release --verbose publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
