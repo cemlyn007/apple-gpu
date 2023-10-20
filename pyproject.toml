@@ -16,7 +16,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: MacOS",
 ]
-dependencies = ["pyobj"]
+dependencies = ["pyobjc"]
 
 [tool.semantic_release]
 branch = "main"
