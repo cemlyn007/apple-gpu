@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apple_gpu"
+version = "0.0.0"
+authors = [
+  { name="Cemlyn Neil Waters", email="cemlynwater@gmail.com" },
+]
+description = "Package for measuring GPU utilisation on Mac OS"
+readme = "README.md"
+requires-python = "==3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+]
+dependencies = ["pyobj"]
+
+[tool.semantic_release]
+branch = "main"
+version_toml = ["pyproject.toml:project.version"]
+
+[tool.setuptools]
+platforms = [
+    "macosx"
+]
