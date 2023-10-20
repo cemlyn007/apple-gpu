@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Python ${{ matrix.python-version }} tests
-    runs-on: macos-latest-large
+    runs-on: [self-hosted]
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
@@ -39,7 +39,7 @@ jobs:
 
   release:
     name: Semantic Release
-    runs-on: macos-latest-large
+    runs-on: [self-hosted]
     concurrency: push
     needs: [test]
     if: github.repository == 'cemlyn007/apple-gpu'
