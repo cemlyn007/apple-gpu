@@ -70,7 +70,7 @@ jobs:
           git config --system --add safe.directory "*"
           python -m semantic_release --verbose version
           python -m semantic_release --verbose publish
-          python -m twine upload dist/* --disable-progress-bar --verbose
+          [ -d "dist" ] && python -m twine upload dist/* --disable-progress-bar --verbose
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TWINE_USERNAME: __token__
