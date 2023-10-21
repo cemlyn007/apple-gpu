@@ -69,8 +69,13 @@ jobs:
           git config --local user.email "$GIT_COMMITTER_EMAIL"
           git config --local --add safe.directory "*"
           python -m semantic_release --verbose version
-          python -m semantic_release --verbose publish
-          [ -d "dist" ] && python -m twine upload dist/* --disable-progress-bar --verbose
+          if [ -d "dist" ]
+          then
+            python -m semantic_release --verbose publish
+            python -m twine upload dist/* --disable-progress-bar --verbose
+          else
+            echo "Nothing to publish"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TWINE_USERNAME: __token__

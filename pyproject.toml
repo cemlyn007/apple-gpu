@@ -31,6 +31,7 @@ changelog = "https://github.com/cemlyn007/apple-gpu/blob/main/CHANGELOG.md"
 [tool.semantic_release]
 branch = "main"
 version_toml = ["pyproject.toml:project.version"]
+build_command = "python -m build"
 
 [tool.setuptools]
 packages = ["apple_gpu"]
