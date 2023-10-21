@@ -67,7 +67,7 @@ jobs:
           python -m pip install python-semantic-release==8.1.2 twine==4.0.2
           git config --global user.name "$GIT_COMMITTER_NAME"
           git config --global user.email "$GIT_COMMITTER_EMAIL"
-          git config --system --add safe.directory "*"
+          git config --global --add safe.directory "*"
           python -m semantic_release --verbose version
           python -m semantic_release --verbose publish
           [ -d "dist" ] && python -m twine upload dist/* --disable-progress-bar --verbose
@@ -76,3 +76,4 @@ jobs:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
           TWINE_REPOSITORY: pypi
+          GIT_CONFIG: ~/.gitconfig
