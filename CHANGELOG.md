@@ -2,6 +2,35 @@
 
 
 
+## v0.3.1 (2025-04-16)
+
+### Ci
+
+* ci: only publish to github if the version changes ([`21e56c6`](https://github.com/cemlyn007/apple-gpu/commit/21e56c63b678076185c7d03a176619d0476821b2))
+
+* ci: try local git config ([`69363d4`](https://github.com/cemlyn007/apple-gpu/commit/69363d426e5765c48868d7203f055f48b64a5dec))
+
+* ci: try changing git config location ([`4a7069d`](https://github.com/cemlyn007/apple-gpu/commit/4a7069d86536519f0ce5f9377e3a3e200b5119d8))
+
+* ci: wrap python version in quotes ([`6843ce7`](https://github.com/cemlyn007/apple-gpu/commit/6843ce7c55ebd4b5edd8004293d022dc0a97469b))
+
+* ci: remove 3.13.0-alpha.1 because pyobc doesn&#39;t have wheels for it ([`54c9d96`](https://github.com/cemlyn007/apple-gpu/commit/54c9d966b0d507aa2da2b8ffbfab57c691184154))
+
+* ci: correct python-version 3.13.0 to 3.13.0-alpha.1 ([`b75a2f9`](https://github.com/cemlyn007/apple-gpu/commit/b75a2f94219813d4807a8eb4b14dbd0aedf631c1))
+
+* ci: only test python 3.10 to 3.13 due to self-hosted limitation ([`141f5fc`](https://github.com/cemlyn007/apple-gpu/commit/141f5fc174f3cf306ea5e8d068388bfd9675b964))
+
+* ci: actions run on self-hosted ([`4165442`](https://github.com/cemlyn007/apple-gpu/commit/41654425d35d3f9e37d559915d13923984ebaf69))
+
+* ci: only upload to pypi if a dist folder exists ([`60297a2`](https://github.com/cemlyn007/apple-gpu/commit/60297a2df611246efc6469f94712bce723fbdb43))
+
+* ci: fix `TWINE_REPOSITORY` ([`3f7efcb`](https://github.com/cemlyn007/apple-gpu/commit/3f7efcbfdfc1cf25c505e62dfa9fee1a91c7d3d4))
+
+### Fix
+
+* fix: memory leak when calling the function multiple times ([`b29be02`](https://github.com/cemlyn007/apple-gpu/commit/b29be027d370b9e9f96798f9a3444bba71c82e01))
+
+
 ## v0.3.0 (2023-10-20)
 
 ### Ci
