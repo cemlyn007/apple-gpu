@@ -1,6 +1,7 @@
 from __future__ import annotations
 import objc
 import Foundation
+import CoreFoundation
 
 IOKit = Foundation.NSBundle.bundleWithIdentifier_("com.apple.framework.IOKit")
 
@@ -11,7 +12,6 @@ functions = [
 ]
 
 objc.loadBundleFunctions(IOKit, globals(), functions)
-
 
 def accelerator_performance_statistics() -> dict[str, int]:
     accelerator_info = IOServiceGetMatchingService(
@@ -24,4 +24,8 @@ def accelerator_performance_statistics() -> dict[str, int]:
     if err != 0:
         raise RuntimeError("IOAccelerator properties not found")
     # else...
-    return dict(props["PerformanceStatistics"])
+    data = dict(props["PerformanceStatistics"])
+    CoreFoundation.CFRelease(props)
+    CoreFoundation.CFRelease(accelerator_info)
+    CoreFoundation.CFRelease(err)
+    return data
