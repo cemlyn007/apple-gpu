@@ -12,8 +12,8 @@ functions = [
 
 objc.loadBundleFunctions(IOKit, globals(), functions)
 
-
 def accelerator_performance_statistics() -> dict[str, int]:
+    import CoreFoundation
     accelerator_info = IOServiceGetMatchingService(
         0, IOServiceMatching(b"IOAccelerator")
     )
@@ -24,4 +24,8 @@ def accelerator_performance_statistics() -> dict[str, int]:
     if err != 0:
         raise RuntimeError("IOAccelerator properties not found")
     # else...
-    return dict(props["PerformanceStatistics"])
+    data = dict(props["PerformanceStatistics"])
+    CoreFoundation.CFRelease(props)
+    CoreFoundation.CFRelease(accelerator_info)
+    CoreFoundation.CFRelease(err)
+    return data
