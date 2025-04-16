@@ -2,9 +2,11 @@
 
 
 
-## v0.3.1 (2025-04-16)
+## v0.3.1 (2025-04-17)
 
 ### Ci
+
+* ci: update github action ([`264be4f`](https://github.com/cemlyn007/apple-gpu/commit/264be4f895df40efe93b16958c94e467c55b86ad))
 
 * ci: only publish to github if the version changes ([`21e56c6`](https://github.com/cemlyn007/apple-gpu/commit/21e56c63b678076185c7d03a176619d0476821b2))
 
