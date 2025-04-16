@@ -1,6 +1,7 @@
 from __future__ import annotations
 import objc
 import Foundation
+import CoreFoundation
 
 IOKit = Foundation.NSBundle.bundleWithIdentifier_("com.apple.framework.IOKit")
 
@@ -13,7 +14,6 @@ functions = [
 objc.loadBundleFunctions(IOKit, globals(), functions)
 
 def accelerator_performance_statistics() -> dict[str, int]:
-    import CoreFoundation
     accelerator_info = IOServiceGetMatchingService(
         0, IOServiceMatching(b"IOAccelerator")
     )
